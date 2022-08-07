@@ -1,19 +1,31 @@
+import java.util.Scanner;
 public class MainTab{
-
-public static void main(String []args) {
-    int [] T = {10,20,5,3,4};
-    int SumTab=0, MaxTab =0; 
-    // the sum  
-    for(int i=0;i<T.length;i++)
-    SumTab = SumTab +T[i];
-    System.out.println("the sum of tab is "+SumTab);
-   // the max 
-    for (int i=0 ;i<T.length;i++){
-        if (T[i]>=T[i+1])
-        MaxTab =T[i];
-        else 
-        MaxTab =T[i+1];
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int size = 0;
+   
+    //table creation
+    System.out.println("enter the size of table");
+    size = input.nextInt();
+    int [] T = new int [size];
+    int [] Texple = {10,20,5,3,4};
+   
+    //table fill
+    for(int i=0;i<T.length;i++){
+        System.out.println("enter the value of T["+i+"]");
+        T[i]=input.nextInt();    
     }
-    System.out.println(MaxTab);
+
+    //table sum
+    int sumTab =0;
+    for(int i=0;i<T.length;i++){
+        sumTab = sumTab + T[i];    
+    }
+    System.out.println("the sum of Table is = "+sumTab);
+
+   
+       
+    
+
 }
 }
